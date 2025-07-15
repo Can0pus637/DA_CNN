@@ -1,0 +1,13 @@
+0.7
+2020.2
+Oct 14 2022
+05:20:55
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sim_1/new/tb_LetNet.sv,1752481899,systemVerilog,,,,tb_LetNet,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/Array_Input.sv,1752514564,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LUT.sv,,Array_Input,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LUT.sv,1752512643,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LetNet.sv,,LUT,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LetNet.sv,1752480434,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/SA.sv,,LetNet,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/SA.sv,1750672191,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/im2.sv,,SA,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/im2.sv,1752481730,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv,,im2,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv,1752481670,systemVerilog,,C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sim_1/new/tb_LetNet.sv,,layerX,,uvm,,,,,,
+C:/Users/Boyang/Desktop/CNN/m1_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/tb_Array_Input.sv,1752588390,systemVerilog,,,,tb_Array_Input,,uvm,,,,,,

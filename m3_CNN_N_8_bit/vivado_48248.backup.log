@@ -1,0 +1,439 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Jul 15 01:39:13 2025
+# Process ID: 48248
+# Current directory: C:/Users/Boyang/Desktop/m3_CNN_N_8_bit
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37736 C:\Users\Boyang\Desktop\m3_CNN_N_8_bit\DA_OBC.xpr
+# Log file: C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/vivado.log
+# Journal file: C:/Users/Boyang/Desktop/m3_CNN_N_8_bit\vivado.jou
+# Running On: CANOPUS637, OS: Windows, CPU Frequency: 3072 MHz, CPU Physical cores: 16, Host memory: 33736 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 2207.891 ; gain = 240.605
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_LetNet'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_LetNet' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/map.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/kernels.coe'
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/A_data.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/B_data.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/A_data.mem'
+INFO: [SIM-utils-43] Exported 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim/B_data.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -prj tb_LetNet_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/Array_Input.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Array_Input
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LUT.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LUT
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/LetNet.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LetNet
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/SA.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module SA
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/im2.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module im2
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module layerX
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sim_1/new/tb_LetNet.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_LetNet
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_LetNet_behav xil_defaultlib.tb_LetNet xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_LetNet_behav xil_defaultlib.tb_LetNet xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 16 differs from formal bit length 6 for port 'patch_i' [C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv:342]
+WARNING: [VRFC 10-3091] actual bit length 14 differs from formal bit length 15 for port 'flattenA_addr' [C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv:346]
+WARNING: [VRFC 10-3091] actual bit length 13 differs from formal bit length 14 for port 'flattenB_addr' [C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/layerX.sv:347]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/Array_Input.sv" Line 1. Module Array_Input(M=1,N=1,K=5) doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.srcs/sources_1/new/Array_Input.sv" Line 1. Module Array_Input(M=1,N=1,K=5) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUFDS
+Compiling module unisims_ver.IBUFGDS
+Compiling module xil_defaultlib.im2_default
+Compiling module xil_defaultlib.SA(M=1,N=1,K=5)
+Compiling module xil_defaultlib.LUT(DATA_WIDTH_A=8,DATA_WIDTH_B=...
+Compiling module xil_defaultlib.Array_Input(M=1,N=1,K=5)
+Compiling module xil_defaultlib.layerX(MAX_N=32)
+Compiling module xil_defaultlib.LetNet_default
+Compiling module xil_defaultlib.tb_LetNet
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_LetNet_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Boyang/Desktop/m3_CNN_N_8_bit/DA_OBC.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_LetNet_behav -key {Behavioral:sim_1:Functional:tb_LetNet} -tclbatch {tb_LetNet.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source tb_LetNet.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 0
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_LetNet_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 0
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2207.891 ; gain = 0.000
+run 1000000 ns
+run 1000000 ns
+im2_flattenA_addr = 0
+im2_flattenB_addr = 5
+time[1881805000] 
+layer_ram1[Adder_Layer1] = 108
+old_data = 126
+col_padding = 0
+row_padding = 0
+Adder_Layer1 = 5045
+Layer=0  M=784 N=6 K=25,out = x 
+LAERY.t = 2,cal_k = 0 cal_m=0 cal_n=0  
+LAERY.t = 2,aim_k = 4 aim_m=783 aim_n=5  
+C_out = 0
+row_padding = 0,col_padding = 0
+ArrayInput t=1 
+im2_cnt = 0 im2_done = 0
+C_out    0
+--- GEMM_Result [1x1] ---
+
+ -18
+layer4_sum0=      0 layer4_sum1=      0 layer4_sum2=      0 layer4_sum3=      0
+im2_flattenA_Adder    0
+im2_flattenB_Adder   5
+Ram2_layer1_input_map
+map_input_RAM2  0 = [
+-35 -24 -73 66 9 -44 -29 -82 117 0 -49 -102 -95 108 59 -58 -115 88 103 50 -7 -124 83 30 37 -16 -65 74 17 -36 -21 -74 ;
+125 8 -41 -30 -87 116 3 -50 -107 -96 111 58 -63 -116 91 102 45 -8 -121 82 25 36 -13 -66 69 16 -33 -22 -79 124 11 -42 ;
+-99 -88 119 2 -55 -108 -93 110 53 -64 -113 90 97 44 -5 -122 77 24 39 -14 -71 68 19 -34 -27 -80 127 10 -47 -100 -85 118 ;
+61 -56 -105 -94 105 52 -61 -114 85 96 47 -6 -127 76 27 38 -19 -72 71 18 -39 -28 -77 126 5 -48 -97 -86 113 60 -53 -106 ;
+93 104 55 -62 -119 84 99 46 -11 -128 79 26 33 -20 -69 70 13 -40 -25 -78 121 4 -45 -98 -91 112 63 -54 -111 92 107 54 ;
+-3 -120 87 98 41 -12 -125 78 21 32 -17 -70 65 12 -37 -26 -83 120 7 -46 -103 -92 115 62 -59 -112 95 106 49 -4 -117 86 ;
+29 40 -9 -126 73 20 35 -18 -75 64 15 -38 -31 -84 123 6 -51 -104 -89 114 57 -60 -109 94 101 48 -1 -118 81 28 43 -10 ;
+-67 72 23 34 -23 -76 67 14 -43 -32 -81 122 1 -52 -101 -90 109 56 -57 -110 89 100 51 -2 -123 80 31 42 -15 -68 75 22 ;
+-35 -24 -73 66 9 -44 -29 -82 117 0 -49 -102 -95 108 59 -58 -115 88 103 50 -7 -124 83 30 37 -16 -65 74 17 -36 -21 -74 ;
+125 8 -41 -30 -87 116 3 -50 -107 -96 111 58 -63 -116 91 102 45 -8 -121 82 25 36 -13 -66 69 16 -33 -22 -79 124 11 -42 ;
+-99 -88 119 2 -55 -108 -93 110 53 -64 -113 90 97 44 -5 -122 77 24 39 -14 -71 68 19 -34 -27 -80 127 10 -47 -100 -85 118 ;
+61 -56 -105 -94 105 52 -61 -114 85 96 47 -6 -127 76 27 38 -19 -72 71 18 -39 -28 -77 126 5 -48 -97 -86 113 60 -53 -106 ;
+93 104 55 -62 -119 84 99 46 -11 -128 79 26 33 -20 -69 70 13 -40 -25 -78 121 4 -45 -98 -91 112 63 -54 -111 92 107 54 ;
+-3 -120 87 98 41 -12 -125 78 21 32 -17 -70 65 12 -37 -26 -83 120 7 -46 -103 -92 115 62 -59 -112 95 106 49 -4 -117 86 ;
+29 40 -9 -126 73 20 35 -18 -75 64 15 -38 -31 -84 123 6 -51 -104 -89 114 57 -60 -109 94 101 48 -1 -118 81 28 43 -10 ;
+-67 72 23 34 -23 -76 67 14 -43 -32 -81 122 1 -52 -101 -90 109 56 -57 -110 89 100 51 -2 -123 80 31 42 -15 -68 75 22 ;
+-35 -24 -73 66 9 -44 -29 -82 117 0 -49 -102 -95 108 59 -58 -115 88 103 50 -7 -124 83 30 37 -16 -65 74 17 -36 -21 -74 ;
+125 8 -41 -30 -87 116 3 -50 -107 -96 111 58 -63 -116 91 102 45 -8 -121 82 25 36 -13 -66 69 16 -33 -22 -79 124 11 -42 ;
+-99 -88 119 2 -55 -108 -93 110 53 -64 -113 90 97 44 -5 -122 77 24 39 -14 -71 68 19 -34 -27 -80 127 10 -47 -100 -85 118 ;
+61 -56 -105 -94 105 52 -61 -114 85 96 47 -6 -127 76 27 38 -19 -72 71 18 -39 -28 -77 126 5 -48 -97 -86 113 60 -53 -106 ;
+93 104 55 -62 -119 84 99 46 -11 -128 79 26 33 -20 -69 70 13 -40 -25 -78 121 4 -45 -98 -91 112 63 -54 -111 92 107 54 ;
+-3 -120 87 98 41 -12 -125 78 21 32 -17 -70 65 12 -37 -26 -83 120 7 -46 -103 -92 115 62 -59 -112 95 106 49 -4 -117 86 ;
+29 40 -9 -126 73 20 35 -18 -75 64 15 -38 -31 -84 123 6 -51 -104 -89 114 57 -60 -109 94 101 48 -1 -118 81 28 43 -10 ;
+-67 72 23 34 -23 -76 67 14 -43 -32 -81 122 1 -52 -101 -90 109 56 -57 -110 89 100 51 -2 -123 80 31 42 -15 -68 75 22 ;
+-35 -24 -73 66 9 -44 -29 -82 117 0 -49 -102 -95 108 59 -58 -115 88 103 50 -7 -124 83 30 37 -16 -65 74 17 -36 -21 -74 ;
+125 8 -41 -30 -87 116 3 -50 -107 -96 111 58 -63 -116 91 102 45 -8 -121 82 25 36 -13 -66 69 16 -33 -22 -79 124 11 -42 ;
+-99 -88 119 2 -55 -108 -93 110 53 -64 -113 90 97 44 -5 -122 77 24 39 -14 -71 68 19 -34 -27 -80 127 10 -47 -100 -85 118 ;
+61 -56 -105 -94 105 52 -61 -114 85 96 47 -6 -127 76 27 38 -19 -72 71 18 -39 -28 -77 126 5 -48 -97 -86 113 60 -53 -106 ;
+93 104 55 -62 -119 84 99 46 -11 -128 79 26 33 -20 -69 70 13 -40 -25 -78 121 4 -45 -98 -91 112 63 -54 -111 92 107 54 ;
+-3 -120 87 98 41 -12 -125 78 21 32 -17 -70 65 12 -37 -26 -83 120 7 -46 -103 -92 115 62 -59 -112 95 106 49 -4 -117 86 ;
+29 40 -9 -126 73 20 35 -18 -75 64 15 -38 -31 -84 123 6 -51 -104 -89 114 57 -60 -109 94 101 48 -1 -118 81 28 43 -10 ;
+-67 72 23 34 -23 -76 67 14 -43 -32 -81 122 1 -52 -101 -90 109 56 -57 -110 89 100 51 -2 -123 80 31 42 -15 -68 75 22 
+];
+
+Ram1_layer1_Result&&layer2_Input
+map_input_RAM1  0 = [
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+0 0 0 0 79 30 18 0 64 0 0 0 70 0 68 0 0 89 0 49 0 0 101 0 58 0 0 0 77 ;
+0 23 17 19 5 64 125 0 0 69 0 69 0 0 76 0 62 0 0 103 0 59 0 0 0 75 14 15 4 ;
+0 0 51 127 0 0 57 0 82 0 0 78 0 62 0 0 116 0 45 0 0 0 63 14 30 3 49 123 0 ;
+0 0 0 58 0 82 0 0 90 0 50 0 0 115 0 46 0 0 0 64 29 28 0 50 0 0 0 55 0 ;
+0 0 69 0 0 90 0 50 0 0 103 0 59 0 0 0 78 28 15 0 63 0 0 0 68 0 67 0 0 ;
+0 0 77 0 64 0 0 104 0 58 0 0 0 76 15 16 5 62 124 0 0 69 0 67 0 0 75 0 61 ;
+0 60 0 0 118 0 46 0 0 0 65 17 31 5 50 125 0 0 56 0 81 0 0 75 0 60 0 0 115 ;
+0 119 0 48 0 0 0 66 30 30 0 52 0 0 0 56 0 80 0 0 89 0 48 0 0 114 0 45 0 ;
+0 0 0 0 79 30 18 0 64 0 0 0 70 0 68 0 0 89 0 49 0 0 101 0 58 0 0 0 77 ;
+0 23 17 19 5 64 125 0 0 69 0 69 0 0 76 0 62 0 0 103 0 59 0 0 0 75 14 15 4 ;
+0 0 51 127 0 0 57 0 82 0 0 78 0 62 0 0 116 0 45 0 0 0 63 14 30 3 49 123 0 ;
+0 0 0 58 0 82 0 0 90 0 50 0 0 115 0 46 0 0 0 64 29 28 0 50 0 0 0 55 0 ;
+0 0 69 0 0 90 0 50 0 0 103 0 59 0 0 0 78 28 15 0 63 0 0 0 68 0 67 0 0 ;
+0 0 77 0 64 0 0 104 0 58 0 0 0 76 15 16 5 62 124 0 0 69 0 67 0 0 75 0 61 ;
+0 60 0 0 118 0 46 0 0 0 65 17 31 5 50 125 0 0 56 0 81 0 0 75 0 60 0 0 115 ;
+0 119 0 48 0 0 0 66 30 30 0 52 0 0 0 56 0 80 0 0 89 0 48 0 0 114 0 45 0 ;
+0 0 0 0 79 30 18 0 64 0 0 0 70 0 68 0 0 89 0 49 0 0 101 0 58 0 0 0 77 ;
+0 23 17 19 5 64 125 0 0 69 0 69 0 0 76 0 62 0 0 103 0 59 0 0 0 75 14 15 4 ;
+0 0 51 127 0 0 57 0 82 0 0 78 0 62 0 0 116 0 45 0 0 0 63 14 30 3 49 123 0 ;
+0 0 0 58 0 82 0 0 90 0 50 0 0 115 0 46 0 0 0 64 29 28 0 50 0 0 0 55 0 ;
+0 0 69 0 0 90 0 50 0 0 103 0 59 0 0 0 78 28 15 0 63 0 0 0 68 0 67 0 0 ;
+0 0 77 0 64 0 0 104 0 58 0 0 0 76 15 16 5 62 124 0 0 69 0 67 0 0 75 0 61 ;
+0 60 0 0 118 0 46 0 0 0 65 17 31 5 50 125 0 0 56 0 81 0 0 75 0 60 0 0 115 ;
+0 119 0 48 0 0 0 66 30 30 0 52 0 0 0 56 0 80 0 0 89 0 48 0 0 114 0 45 0 ;
+0 0 0 0 79 30 18 0 64 0 0 0 70 0 68 0 0 89 0 49 0 0 101 0 58 0 0 0 77 ;
+0 23 17 19 5 64 125 0 0 69 0 69 0 0 76 0 62 0 0 103 0 59 0 0 0 75 14 15 4 ;
+0 0 51 127 0 0 57 0 82 0 0 78 0 62 0 0 116 0 45 0 0 0 63 14 30 3 49 123 0 ;
+0 0 0 58 0 82 0 0 90 0 50 0 0 115 0 46 0 0 0 64 29 28 0 50 0 0 0 55 0 
+];
+
+Ram1_layer1_Result&&layer2_Input
+map_input_RAM1  1 = [
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ;
+0 8 0 31 121 0 62 100 0 27 75 0 95 73 0 50 0 22 62 0 82 0 4 23 0 114 0 29 120 ;
+0 21 0 46 106 0 21 59 0 111 69 0 54 0 18 46 0 99 0 0 29 0 108 0 33 0 0 45 105 ;
+0 100 0 5 66 0 105 53 0 70 0 2 51 0 92 0 0 46 0 92 0 50 0 0 50 121 0 4 64 ;
+0 52 0 89 57 0 66 0 7 68 0 77 0 11 40 0 100 0 44 114 0 68 115 0 11 80 0 88 55 ;
+0 66 0 50 0 23 62 0 83 0 5 24 0 116 0 28 119 0 62 99 0 26 74 0 93 71 0 49 0 ;
+0 0 17 47 0 98 0 0 31 0 109 0 35 0 0 46 105 0 20 59 0 108 66 0 53 0 16 45 0 ;
+0 0 92 0 0 46 0 94 0 51 0 0 52 122 0 4 64 0 103 50 0 70 0 0 52 0 91 0 0 ;
+0 4 41 0 100 0 46 115 0 67 115 0 10 80 0 87 57 0 65 0 6 68 0 75 0 9 39 0 97 ;
+0 8 0 31 121 0 62 100 0 27 75 0 95 73 0 50 0 22 62 0 82 0 4 23 0 114 0 29 120 ;
+0 21 0 46 106 0 21 59 0 111 69 0 54 0 18 46 0 99 0 0 29 0 108 0 33 0 0 45 105 ;
+0 100 0 5 66 0 105 53 0 70 0 2 51 0 92 0 0 46 0 92 0 50 0 0 50 121 0 4 64 ;
+0 52 0 89 57 0 66 0 7 68 0 77 0 11 40 0 100 0 44 114 0 68 115 0 11 80 0 88 55 ;
+0 66 0 50 0 23 62 0 83 0 5 24 0 116 0 28 119 0 62 99 0 26 74 0 93 71 0 49 0 ;
+0 0 17 47 0 98 0 0 31 0 109 0 35 0 0 46 105 0 20 59 0 108 66 0 53 0 16 45 0 ;
+0 0 92 0 0 46 0 94 0 51 0 0 52 122 0 4 64 0 103 50 0 70 0 0 52 0 91 0 0 ;
+0 4 41 0 100 0 46 115 0 67 115 0 10 80 0 87 57 0 65 0 6 68 0 75 0 9 39 0 97 ;
+0 8 0 31 121 0 62 100 0 27 75 0 95 73 0 50 0 22 62 0 82 0 4 23 0 114 0 29 120 ;
+0 21 0 46 106 0 21 59 0 111 69 0 54 0 18 46 0 99 0 0 29 0 108 0 33 0 0 45 105 ;
+0 100 0 5 66 0 105 53 0 70 0 2 51 0 92 0 0 46 0 92 0 50 0 0 50 121 0 4 64 ;
+0 52 0 89 57 0 66 0 7 68 0 77 0 11 40 0 100 0 44 114 0 68 115 0 11 80 0 88 55 ;
+0 66 0 50 0 23 62 0 83 0 5 24 0 116 0 28 119 0 62 99 0 26 74 0 93 71 0 49 0 ;
+0 0 17 47 0 98 0 0 31 0 109 0 35 0 0 46 105 0 20 59 0 108 66 0 53 0 16 45 0 ;
+0 0 92 0 0 46 0 94 0 51 0 0 52 122 0 4 64 0 103 50 0 70 0 0 52 0 91 0 0 ;
+0 4 41 0 100 0 46 115 0 67 115 0 10 80 0 87 57 0 65 0 6 68 0 75 0 9 39 0 97 ;
+0 8 0 31 121 0 62 100 0 27 75 0 95 73 0 50 0 22 62 0 82 0 4 23 0 114 0 29 120 ;
+0 21 0 46 106 0 21 59 0 111 69 0 54 0 18 46 0 99 0 0 29 0 108 0 33 0 0 45 105 ;
+0 100 0 5 66 0 105 53 0 70 0 2 51 0 92 0 0 46 0 92 0 50 0 0 50 121 0 4 64 ;
+0 52 0 89 57 0 66 0 7 68 0 77 0 11 40 0 100 0 44 114 0 68 115 0 11 80 0 88 55 
+];
+
+STRIDE1
+LAERY.t = 2,rd_k = 1 rd_mi=0 rd_mj=0 rd_n=0 LAYER_done=1 LAYER_rd_done=1 LAYER_cal_done=1 LAYER_aim_done=1  
+v_idx = 0
+u_idx = 0
+c_idx = 0
+Last_Number = 1
+setzeroA = x
+setzeroB = 0
+flattenA = [
+  42, -15, -68, 75, 22, x
+];
+flattenB = [
+  -40;
+  -25;
+  -78;
+  121;
+  4;
+  x
+];
+flattenA = [
+  42, -15, -68, 75, 22, x
+];
+flattenB = [
+  -40;
+  -25;
+  -78;
+  121;
+  4;
+  x
+];
+--------------------------------------------------
+run 1000000 ns
+im2_flattenA_addr = 0
+im2_flattenB_addr = 5
+time[2916795000] 
+layer_ram1[Adder_Layer1] = 0
+old_data = -50
+col_padding = 0
+row_padding = 0
+Adder_Layer1 = 1175
+Layer=1  M=196 N=6 K=54,out = x 
+LAERY.t = 2,cal_k = 0 cal_m=0 cal_n=0  
+LAERY.t = 2,aim_k = 10 aim_m=195 aim_n=5  
+C_out = 0
+row_padding = 0,col_padding = 0
+ArrayInput t=2 
+im2_cnt = 0 im2_done = 0
+C_out    0
+--- GEMM_Result [1x1] ---
+
+ -41
+layer4_sum0=      0 layer4_sum1=      0 layer4_sum2=      0 layer4_sum3=      0
+im2_flattenA_Adder    0
+im2_flattenB_Adder   5
+Ram2_layer2
+map_input_RAM2  0 = [
+0 92 115 0 0 0 0 0 8 18 0 21 43 97 ;
+0 0 0 0 0 99 38 0 0 73 42 79 34 0 ;
+21 0 101 35 0 114 76 75 0 0 0 0 0 0 ;
+94 0 0 75 40 92 34 0 0 0 0 99 39 0 ;
+61 77 0 0 0 0 0 0 101 32 0 109 76 84 ;
+0 0 0 0 0 99 38 0 0 73 42 79 34 0 ;
+21 0 101 35 0 114 76 75 0 0 0 0 0 0 ;
+94 0 0 75 40 92 34 0 0 0 0 99 39 0 ;
+61 77 0 0 0 0 0 0 101 32 0 109 76 84 ;
+0 0 0 0 0 99 38 0 0 73 42 79 34 0 ;
+21 0 101 35 0 114 76 75 0 0 0 0 0 0 ;
+94 0 0 75 40 92 34 0 0 0 0 99 39 0 ;
+61 77 0 0 0 0 0 0 101 32 0 109 76 84 ;
+0 0 0 0 0 99 38 0 0 73 42 79 34 5 ;
+];
+
+Ram2_layer2
+map_input_RAM2  1 = [
+8 28 37 120 0 0 121 121 0 64 79 0 33 24 ;
+3 78 98 16 87 0 91 105 0 69 0 18 0 119 ;
+0 112 0 127 84 0 47 0 84 0 124 0 34 118 ;
+112 105 0 75 0 44 0 123 97 18 93 0 96 106 ;
+0 0 86 0 78 14 33 113 0 0 85 0 44 0 ;
+3 78 98 16 87 0 91 105 0 69 0 18 0 119 ;
+0 112 0 127 84 0 47 0 84 0 124 0 34 118 ;
+112 105 0 75 0 44 0 123 97 18 93 0 96 106 ;
+0 0 86 0 78 14 33 113 0 0 85 0 44 0 ;
+3 78 98 16 87 0 91 105 0 69 0 18 0 119 ;
+0 112 0 127 84 0 47 0 84 0 124 0 34 118 ;
+112 105 0 75 0 44 0 123 97 18 93 0 96 106 ;
+0 0 86 0 78 14 33 113 0 0 85 0 44 0 ;
+3 78 98 16 87 0 91 105 0 69 0 18 0 117 ;
+];
+
+Ram2_layer2
+map_input_RAM2  2 = [
+0 0 49 78 87 0 13 37 45 0 0 0 22 0 ;
+103 92 121 0 122 29 0 63 101 0 66 114 42 123 ;
+88 90 61 0 74 0 70 0 45 81 0 85 0 81 ;
+0 65 101 0 68 113 44 121 122 0 121 25 0 61 ;
+13 0 44 87 0 116 3 86 53 0 74 0 66 0 ;
+103 92 121 0 122 29 0 63 101 0 66 114 42 123 ;
+88 90 61 0 74 0 70 0 45 81 0 85 0 81 ;
+0 65 101 0 68 113 44 121 122 0 121 25 0 61 ;
+13 0 44 87 0 116 3 86 53 0 74 0 66 0 ;
+103 92 121 0 122 29 0 63 101 0 66 114 42 123 ;
+88 90 61 0 74 0 70 0 45 81 0 85 0 81 ;
+0 65 101 0 68 113 44 121 122 0 121 25 0 61 ;
+13 0 44 87 0 116 3 86 53 0 74 0 66 0 ;
+103 92 121 0 122 29 0 63 101 0 66 114 42 72 ;
+];
+
+Ram2_layer2
+map_input_RAM2  3 = [
+104 50 49 0 11 0 0 85 0 14 105 108 111 39 ;
+25 0 108 43 113 0 0 102 69 50 57 103 0 105 ;
+99 121 0 0 111 39 67 31 0 0 0 0 0 115 ;
+0 107 77 46 66 49 0 103 110 37 109 0 0 102 ;
+78 40 0 0 0 0 0 118 0 0 108 35 67 22 ;
+25 0 108 43 113 0 0 102 69 50 57 103 0 105 ;
+99 121 0 0 111 39 67 31 0 0 0 0 0 115 ;
+0 107 77 46 66 49 0 103 110 37 109 0 0 102 ;
+78 40 0 0 0 0 0 118 0 0 108 35 67 22 ;
+25 0 108 43 113 0 0 102 69 50 57 103 0 105 ;
+99 121 0 0 111 39 67 31 0 0 0 0 0 115 ;
+0 107 77 46 66 49 0 103 110 37 109 0 0 102 ;
+78 40 0 0 0 0 0 118 0 0 108 35 67 22 ;
+25 0 108 43 113 0 0 102 69 50 57 103 0 0 ;
+];
+
+Ram2_layer2
+map_input_RAM2  4 = [
+0 0 0 55 0 77 119 23 52 51 0 0 0 0 ;
+0 82 107 0 0 97 68 0 81 0 50 0 76 33 ;
+0 23 86 78 0 31 0 97 77 84 0 115 61 23 ;
+20 0 85 0 53 0 76 31 103 0 0 96 63 0 ;
+28 104 75 83 0 104 57 24 87 73 0 28 0 92 ;
+0 82 107 0 0 97 68 0 81 0 50 0 76 33 ;
+0 23 86 78 0 31 0 97 77 84 0 115 61 23 ;
+20 0 85 0 53 0 76 31 103 0 0 96 63 0 ;
+28 104 75 83 0 104 57 24 87 73 0 28 0 92 ;
+0 82 107 0 0 97 68 0 81 0 50 0 76 33 ;
+0 23 86 78 0 31 0 97 77 84 0 115 61 23 ;
+20 0 85 0 53 0 76 31 103 0 0 96 63 0 ;
+28 104 75 83 0 104 57 24 87 73 0 28 0 92 ;
+0 82 107 0 0 97 68 0 81 0 50 0 76 80 ;
+];
+
+Ram2_layer2
+map_input_RAM2  5 = [
+47 50 109 11 0 0 57 97 62 0 0 117 0 50 ;
+63 38 0 84 68 0 0 0 0 0 0 0 0 0 ;
+52 74 0 0 0 0 0 38 0 42 0 44 111 67 ;
+7 0 0 0 0 40 0 0 0 87 65 0 0 0 ;
+88 34 0 40 0 3 106 70 0 0 0 0 0 40 ;
+63 38 0 84 68 0 0 0 0 0 0 0 0 0 ;
+52 74 0 0 0 0 0 38 0 42 0 44 111 67 ;
+7 0 0 0 0 40 0 0 0 87 65 0 0 0 ;
+88 34 0 40 0 3 106 70 0 0 0 0 0 40 ;
+63 38 0 84 68 0 0 0 0 0 0 0 0 0 ;
+52 74 0 0 0 0 0 38 0 42 0 44 111 67 ;
+7 0 0 0 0 40 0 0 0 87 65 0 0 0 ;
+88 34 0 40 0 3 106 70 0 0 0 0 0 40 ;
+63 38 0 84 68 0 0 0 0 0 0 0 0 0 ;
+];
+
+STRIDE2
+LAERY.t = 2,rd_k = 1 rd_mi=0 rd_mj=0 rd_n=0 LAYER_done=1 LAYER_rd_done=1 LAYER_cal_done=1 LAYER_aim_done=1  
+v_idx = 0
+u_idx = 0
+c_idx = 0
+Last_Number = 1
+setzeroA = x
+setzeroB = 0
+flattenA = [
+  0, 0, 94, 108, 0, x
+];
+flattenB = [
+  -99;
+  -88;
+  119;
+  2;
+  0;
+  x
+];
+flattenA = [
+  0, 0, 94, 108, 0, x
+];
+flattenB = [
+  -99;
+  -88;
+  119;
+  2;
+  0;
+  x
+];
+--------------------------------------------------
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 15 01:57:16 2025...
