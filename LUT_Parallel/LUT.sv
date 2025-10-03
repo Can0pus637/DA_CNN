@@ -7,8 +7,7 @@ module LUT#(
     parameter N=4,
     parameter K=4,
     parameter int LUT_WIDTH  = DATA_WIDTH_B + $clog2(K),
-    parameter sK=(K+1)/2,
-    localparam int NUM_LEVELS = (sK <= 1) ? 1 : $clog2(sK) + 1
+
 )(
     input rst,
     input clk,
@@ -47,7 +46,7 @@ genvar i;
                 .W2           (B_2[i + 1]),
                 .W3           (B_2[i + 2]),
                 .W4           (B_2[i + 3]),
-                .four_bit_addr(extended_addr[i + 3 : i]), // Ã¿ 4 Î»ÇÐÆ¬£¬ÊµÀý 0 ÓÃ [3:0]£¬1 ÓÃ [7:4] ¡­
+                .four_bit_addr(extended_addr[i + 3 : i]), // æ¯ 4 ä½åˆ‡ç‰‡ï¼Œå®žä¾‹ 0 ç”¨ [3:0]ï¼Œ1 ç”¨ [7:4] â€¦
                 .Out           (B_Sum[i/4])
             );
         end
