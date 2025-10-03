@@ -18,13 +18,13 @@ module LUT#(
   //  input  logic signed [DATA_WIDTH-1:0] B[K],
     input logic signed [DATA_WIDTH_B-1:0] B_temp [K],
     input logic [7:0] t,
-    output logic signed  [LUT_WIDTH-1:0] C_out
+    output logic signed  [LUT_WIDTH:0] LUT_out
     
 );
-    logic signed [LUT_WIDTH-1:0] LUT_out;
+   
     logic [K-1:0] extended_addr;
     logic signed [DATA_WIDTH_B-1:0] B_2 [K];
-    logic signed [DATA_WIDTH_B-1:0] B_Sum [K/2];
+    logic signed [DATA_WIDTH_B:0] B_Sum [K/2];
 
     assign extended_addr = {addr_array, 1'b1};
     always_comb begin
@@ -54,40 +54,41 @@ module LUT#(
         end
     endgenerate
 
-    SA #(
-         .DATA_WIDTH_A(DATA_WIDTH_A),
-        .DATA_WIDTH_B(DATA_WIDTH_B),
-        .M(M),
-        .N(N),
-        .K(K)
 
-    ) SA (
-        .clk(clk),
-        .rst(rst),
-        //.gen_done(gen_done),
-        .C_in(LUT_out),
-        .C_out(C_out),
- 
-        .A0(A0 )
-      
-    );
 endmodule
+
 
 module comb_adder #(
     parameter int DATA_WIDTH_B = 16
 ) (
     input  logic signed [DATA_WIDTH_B-1:0] W1,
     input  logic signed [DATA_WIDTH_B-1:0] W2,
-    output logic signed [DATA_WIDTH_B-1:0]   Result,
-    input  logic        [1:0] sel  
+    input  logic        [1:0]             sel,  
+    output logic signed [DATA_WIDTH_B:0]  Result
 );
-    logic signed [DATA_WIDTH_B-1:0]   Sum[4];
-    assign Sum[3] = W1 + W2;//l1
-    assign Sum[0] = -Sum[3];//00
-    assign Sum[1] = Sum[3]-(2*W2 );//01
-    assign Sum[2] = Sum[3]-(2*W1);//10
-    assign Result = Sum[sel];
-    
+    // 仅保留两条算术路径：sum 与 diff
+    logic signed [DATA_WIDTH_B-1:0] sum;      // W1 + W2
+    logic signed [DATA_WIDTH_B-1:0] diff;     // W1 - W2
+    logic signed [DATA_WIDTH_B-1:0] neg_sum;  // -(W1 + W2)
+    logic signed [DATA_WIDTH_B-1:0] neg_diff; // -(W1 - W2) == W2 - W1
+
+    always_comb begin
+        sum      = W1 + W2;
+        diff     = W1 - W2;
+        neg_sum  = -sum;     // 综合为 (~sum)+1
+        neg_diff = -diff;    // 综合为 (~diff)+1
+
+        // 保留一个大的四路选择器
+        unique case (sel)
+            2'b11: Result = sum;      // W1 + W2
+            2'b00: Result = neg_sum;  // -(W1 + W2)
+            2'b01: Result = diff;     // W1 - W2
+            2'b10: Result = neg_diff; // W2 - W1
+            default: Result = '0;
+        endcase
+    end
 endmodule
+
+
 
 

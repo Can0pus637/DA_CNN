@@ -1,11 +1,11 @@
 `timescale 1ns / 1ps
 
 module LUT#(
-    parameter int DATA_WIDTH_A = 16,
-    parameter int DATA_WIDTH_B = 16,
-    parameter M=9,
-    parameter N=9,
-    parameter K=9,
+    parameter int DATA_WIDTH_A = 8,
+    parameter int DATA_WIDTH_B = 8,
+    parameter M=4,
+    parameter N=4,
+    parameter K=4,
     parameter int LUT_WIDTH  = DATA_WIDTH_B + $clog2(K)
 )(
     input rst,
@@ -16,11 +16,10 @@ module LUT#(
   //  input  logic signed [DATA_WIDTH-1:0] B[K],
     input logic signed [DATA_WIDTH_B-1:0] B_temp [K],
     input logic [7:0] t,
-    output logic signed  [LUT_WIDTH-1:0] C_out
+    output logic signed  [LUT_WIDTH:0] LUT_out
     
 );
     logic signed [DATA_WIDTH_B-1:0] B_2 [K];
-    logic signed [LUT_WIDTH-1:0] LUT_out;
     logic [K-1:0] extended_addr;
     logic signed [DATA_WIDTH_B:0] B_Sum [K/4];
     assign extended_addr = {addr_array, 1'b1};
@@ -50,28 +49,6 @@ genvar i;
             );
         end
     endgenerate
-
-
-
-
-
-
-
-    SA #(
-         .DATA_WIDTH_A(DATA_WIDTH_A),
-        .DATA_WIDTH_B(DATA_WIDTH_B),
-        .M(M),
-        .N(N),
-        .K(K)
-
-    ) SA (
-        .clk(clk),
-        .rst(rst),
-        //.gen_done(gen_done),
-        .C_in(LUT_out),
-        .C_out(C_out),
-        .A0(A0 )
-    );
 endmodule
 
 module combine_W #(
@@ -85,9 +62,9 @@ module combine_W #(
     input logic [3:0]four_bit_addr,
     output logic signed [WIDTH:0] Out
 );
-    logic signed [WIDTH:0] W_Out [7:0] ;
+    
     logic signed [WIDTH:0] W1_ext ;
-    logic signed [WIDTH:0] W2_ext ;
+    logic signed [WIDTH:0] W2_ext_Sum ;
     logic signed [WIDTH:0] W3_ext ;
     logic signed [WIDTH:0] W4_ext ;
                   
@@ -100,29 +77,34 @@ module combine_W #(
     logic signed [WIDTH:0] two_W2 ;
     logic  [2:0] high2;
     always_comb begin
-     if(four_bit_addr[0])
-       W1_ext = W1;
-     else
-       W1_ext = -W1;
-     if(four_bit_addr[1])
-       W2_ext = W2;
-     else
-       W2_ext = -W2;
-       
+
+
        W3_ext = W3;
        W4_ext = W4;
        W_Sub = W4_ext + W3_ext;
-       W_Sum = W1_ext + W2_ext + W_Sub;
-       two_W_Sub = W_Sub  *2 ;
-       two_W4    = W4_ext *2 ;
-       two_W3    = W3_ext *2 ;
+       
+       
+    W1_ext = four_bit_addr[0] ? W1 : -W1;
+    W2_ext_Sum = four_bit_addr[1] ? W1_ext+W2 : W1_ext-W2;
+    W_Sum  = W2_ext_Sum + W_Sub;
+       
+       two_W_Sub = W_Sub  <<<1 ;
+       two_W4    = W4_ext <<<1 ;
+       two_W3    = W3_ext <<<1 ;
  
-        W_Out[3] = W_Sum;                     // 11
-        W_Out[2] = W_Sum - two_W3;            // 10
-        W_Out[1] = W_Sum - two_W4;            // 01
-        W_Out[0] = W_Sum - two_W_Sub;         // 00
+       // W_Out[3] = W_Sum;                     // 11
+       // W_Out[2] = W_Sum - two_W3;            // 10
+       // W_Out[1] = W_Sum - two_W4;            // 01
+       // W_Out[0] = W_Sum - two_W_Sub;         // 00
 
         high2 = four_bit_addr[3:2];
-        Out =W_Out[high2];
+        case (high2)
+            2'b11: Out = W_Sum;
+            2'b10: Out = W_Sum - two_W3;
+            2'b01: Out = W_Sum - two_W4;
+            2'b00: Out = W_Sum - two_W_Sub;
+        default: Out = '0;
+    endcase
+     //   Out =W_Out[high2];
     end
 endmodule

@@ -1,11 +1,11 @@
-module GEMM #(
+module Array_Input #(
     parameter int DATA_WIDTH_A =    8,//kernel
     parameter int DATA_WIDTH_B =    8,//map
     parameter int DATA_WIDTH_bias = DATA_WIDTH_B,
     parameter int DATA_WIDTH_output=DATA_WIDTH_B,
     parameter M = 2,
     parameter N = 4,
-    parameter K =4,
+    parameter K =8,
     parameter int LUT_WIDTH  = DATA_WIDTH_B + $clog2(K),
  
     parameter sK=(K+1)/2
@@ -19,6 +19,11 @@ module GEMM #(
     input  logic signed [DATA_WIDTH_bias-1:0] bias [N],
     output logic signed [DATA_WIDTH_output-1:0]  final_out [N]
 );
+
+
+
+
+
         logic    A0_array   ;
         logic [K-2:0] addr_array   ;
         logic signed [DATA_WIDTH_A-1:0] A_change [K];
@@ -98,14 +103,14 @@ always_comb begin
             //assign totaloffset[col]=(B_sum[col]>>>(DATA_WIDTH_B))-bias[col];
             if(gen_done)
                 if(bias_en)
-                    totaloffset[col]=(B_sum[col]>>>(DATA_WIDTH_A))-bias[col];
+                    totaloffset[col]=(B_sum[col]>>>(DATA_WIDTH_A+1))-bias[col];
                 else
-                    totaloffset[col]=(B_sum[col]>>>(DATA_WIDTH_A));//-bias[col];
+                    totaloffset[col]=(B_sum[col]>>>(DATA_WIDTH_A+1));//-bias[col];
    
             else
                totaloffset[col]=0;
             if(t==0)
-               final_out[col] = C_out[col]- totaloffset[col];
+               final_out[col] = (C_out[col]- totaloffset[col]);
         end
         
 end
@@ -122,10 +127,18 @@ end
             .clk      (clk),
             .A0 (A0_array ),
             .gen_done (gen_done),
-            .addr_array(addr_array ),
+            .addr_array(addr_array),
             .C_out     (C_out[j]),
             .B_temp(B_temp[j])
           );
+          
+          
+          
+          
+          
+          
+          
+          
        end
        
    endgenerate
